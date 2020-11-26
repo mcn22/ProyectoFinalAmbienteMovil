@@ -15,6 +15,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import data.AdminDB;
+import gestion.UsuarioGestion;
+import model.Usuario;
+
 public class Registro extends AppCompatActivity {
 
     private EditText etNombre;
@@ -30,6 +34,10 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         mAuth = FirebaseAuth.getInstance();
+
+        AdminDB data = new AdminDB(this,"baseUsuarios.db",null,1);
+        UsuarioGestion.init(data);
+
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
         etEdad = findViewById(R.id.etEdad);
@@ -53,11 +61,11 @@ public class Registro extends AppCompatActivity {
     }//fin del update UI
 
     public void registro(View view){
-        String nombre = etNombre.getText().toString();
-        String apellido = etApellido.getText().toString();
-        String edad = etEdad.getText().toString();
-        String telefono = etTelefono.getText().toString();
-        String correo = etCorreo.getText().toString();
+        final String nombre = etNombre.getText().toString();
+        final String apellido = etApellido.getText().toString();
+        final String edad = etEdad.getText().toString();
+        final String telefono = etTelefono.getText().toString();
+        final String correo = etCorreo.getText().toString();
         String pass = etPass.getText().toString();
         if(!nombre.equals("") && !apellido.equals("") && !edad.equals("") &&
                 !telefono.equals("")&& !correo.equals("")&& !pass.equals("")){
@@ -66,6 +74,7 @@ public class Registro extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
+                                insertaUsuario(nombre, apellido,edad, telefono, correo);
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 updateUI(user);
                             }else {
@@ -78,4 +87,16 @@ public class Registro extends AppCompatActivity {
             Toast.makeText(Registro.this, "Debes completar los datos", Toast.LENGTH_SHORT).show();
         }
     }//fin de registro
-}
+
+    private void insertaUsuario(String nombre, String apellido, String edad, String telefono, String correo){
+        Usuario usuario = null;
+        usuario = new Usuario(
+                0,
+                nombre,
+                apellido,
+                Integer.parseInt(edad),
+                telefono,
+                correo);
+        UsuarioGestion.inserta(usuario);
+    }//fin del inserta
+}//fin de la clase

@@ -6,9 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".ui.cuenta.Cuenta">
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNombre" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..." />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvApellido" />
+
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..." />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvEdad" />
+
+    <TextView
+        android:id="@+id/tvEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..." />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTelefono" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..." />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCorreo" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="..." />
+
     <Button
         android:id="@+id/btLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btCerrarSesion" />
+
 </LinearLayout>
