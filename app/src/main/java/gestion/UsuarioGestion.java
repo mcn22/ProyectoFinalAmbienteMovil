@@ -34,6 +34,7 @@ public class UsuarioGestion {
 
     public static Usuario buscar(String correo) {
         Usuario usuario = null;
+        data.toString();
         conexion = data.getReadableDatabase();
 
         Cursor datos = conexion.rawQuery(
@@ -42,12 +43,13 @@ public class UsuarioGestion {
 
         if (datos.moveToFirst()) {
             usuario = new Usuario(
-                    datos.getInt(0),
+                    datos.getString(0),
                     datos.getString(1),
                     datos.getString(2),
                     datos.getInt(3),
                     datos.getString(4),
-                    datos.getString(5));
+                    datos.getString(5),
+                    datos.getString(6));
         }
         conexion.close();
         return usuario;

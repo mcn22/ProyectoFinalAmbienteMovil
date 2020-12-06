@@ -14,6 +14,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import data.AdminDB;
 import gestion.UsuarioGestion;
@@ -28,15 +30,19 @@ public class Registro extends AppCompatActivity {
     private EditText etCorreo;
     private EditText etPass;
     private FirebaseAuth mAuth;
+    private FirebaseDatabase database;
+    private DatabaseReference usuariosRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        usuariosRef = database.getReference("usuarios");
 
-        AdminDB data = new AdminDB(this,"baseUsuarios.db",null,1);
-        UsuarioGestion.init(data);
+        //AdminDB data = new AdminDB(this,"baseUsuarios.db",null,1);
+        //UsuarioGestion.init(data);
 
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
@@ -74,8 +80,8 @@ public class Registro extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                insertaUsuario(nombre, apellido,edad, telefono, correo);
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                insertaUsuario(nombre, apellido,edad, telefono, correo, "", user.getUid());
                                 updateUI(user);
                             }else {
                                 Toast.makeText(Registro.this, "Error de registro", Toast.LENGTH_SHORT).show();
@@ -88,15 +94,15 @@ public class Registro extends AppCompatActivity {
         }
     }//fin de registro
 
-    private void insertaUsuario(String nombre, String apellido, String edad, String telefono, String correo){
-        Usuario usuario = null;
-        usuario = new Usuario(
-                0,
+    private void insertaUsuario(String nombre, String apellido, String edad, String telefono, String correo, String imagen, String uId){
+        Usuario usuario = new Usuario(uId,
                 nombre,
                 apellido,
                 Integer.parseInt(edad),
                 telefono,
-                correo);
-        UsuarioGestion.inserta(usuario);
+                correo, imagen
+        );
+        String direccion = "user_" + uId;
+        usuariosRef.child(direccion).setValue(usuario);
     }//fin del inserta
 }//fin de la clase

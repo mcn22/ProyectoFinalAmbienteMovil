@@ -6,65 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".ui.cuenta.Cuenta">
 
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvNombre" />
+        android:text="@string/tvNombre"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..." />
+        android:text="Cargando..."
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvApellido" />
+        android:text="@string/tvApellido"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvApellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..." />
+        android:text="Cargando..."
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvEdad" />
+        android:text="@string/tvEdad"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..." />
+        android:text="Cargando..."
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvTelefono" />
+        android:text="@string/tvTelefono"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..." />
+        android:text="Cargando..."
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvCorreo" />
+        android:text="@string/tvCorreo"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..." />
+        android:text="Cargando..."
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_editar" />
 
     <Button
         android:id="@+id/btLogout"

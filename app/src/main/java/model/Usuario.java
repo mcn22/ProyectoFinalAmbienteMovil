@@ -2,31 +2,33 @@ package model;
 
 public class Usuario {
 
-    private int id;
+    private String id;
     private String nombre;
     private String apellido;
     private int edad;
     private String telefono;
     private String correo;
+    private String imagen;
 
     public Usuario() {
     }
 
-    public Usuario(int id, String nombre, String apellido, int edad, String telefono, String correo) {
+    public Usuario(String id, String nombre, String apellido, int edad, String telefono, String correo, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.telefono = telefono;
         this.correo = correo;
+        this.imagen = imagen;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -68,5 +70,13 @@ public class Usuario {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }//fin de la clase
