@@ -40,7 +40,7 @@
         android:text="@string/tvEdad" />
 
     <EditText
-        android:id="@+id/etEdad"
+        android:id="@+id/etFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -53,14 +53,14 @@
         android:text="@string/tvTelefono" />
 
     <EditText
-        android:id="@+id/etTelefono"
+        android:id="@+id/etCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone" />
 
     <Button
-        android:id="@+id/btConfirmar"
+        android:id="@+id/btCreaCita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btConfirmar"

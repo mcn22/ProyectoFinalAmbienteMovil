@@ -17,8 +17,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import data.AdminDB;
-import gestion.UsuarioGestion;
 import model.Usuario;
 
 public class Registro extends AppCompatActivity {
@@ -46,8 +44,8 @@ public class Registro extends AppCompatActivity {
 
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
-        etEdad = findViewById(R.id.etEdad);
-        etTelefono = findViewById(R.id.etTelefono);
+        etEdad = findViewById(R.id.etFecha);
+        etTelefono = findViewById(R.id.etCorreo);
         etCorreo = findViewById(R.id.etCorreo);
         etPass = findViewById(R.id.etPass);
     }
@@ -61,7 +59,7 @@ public class Registro extends AppCompatActivity {
 
     private void updateUI(FirebaseUser currentUser) {
         if(currentUser != null){
-            Intent intent = new Intent(this, Principal.class);
+            Intent intent = new Intent(this, activity_menuprincipal.class);
             startActivity(intent);
         }//fin del if
     }//fin del update UI
@@ -81,7 +79,7 @@ public class Registro extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                insertaUsuario(nombre, apellido,edad, telefono, correo, "", user.getUid());
+                                insertaUsuario(nombre, apellido,edad, telefono, correo, "img_"+user.getUid(), user.getUid());
                                 updateUI(user);
                             }else {
                                 Toast.makeText(Registro.this, "Error de registro", Toast.LENGTH_SHORT).show();

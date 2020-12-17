@@ -43,7 +43,6 @@ import model.Usuario;
 public class Principal extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    //private ObjectInputStream.GetField Picasso;
     private DatabaseReference referencia;
     private FirebaseAuth mAuth;
     private StorageReference storageRef;
@@ -128,7 +127,8 @@ public class Principal extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.principal, menu);
+       getMenuInflater().inflate(R.menu.principal, menu);
+
         return true;
     }
 

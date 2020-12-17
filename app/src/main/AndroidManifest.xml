@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.proyectofinalambienteweb">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.cuenta.EditarDatos"></activity>
-
+        <activity android:name=".activity_CambioFoto"></activity>
+        <activity android:name=".activity_infopersonal" />
+        <activity android:name=".activity_editarcita" />
+        <activity android:name=".activity_nuevacita" />
+        <activity android:name=".activity_menuprincipal" />
+        <activity android:name=".menuprincipal" />
+        <activity android:name=".ui.cuenta.EditarDatos" />
         <activity
             android:name=".Principal"
             android:label="@string/title_activity_principal"
@@ -24,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

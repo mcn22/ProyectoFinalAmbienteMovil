@@ -4,6 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondomovil"
     tools:context=".activity_nuevacita">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="32dp"
+        android:text="Agregar cita"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/tvEstablecimiento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="208dp"
+        android:text="@string/tvArea"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btCreaCita"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="396dp"
+        android:background="#F24F13"
+        android:onClick="creaCita"
+        android:text="@string/tvGuardar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btCancela"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="396dp"
+        android:background="#009688"
+        android:onClick="goToMenu"
+        android:text="@string/btVolver"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="308dp"
+        android:text="@string/tvFecha"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="264dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:inputType="date"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerEstablecimiento"
+        android:layout_width="363dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerArea"
+        android:layout_width="363dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="236dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerHora"
+        android:layout_width="153dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="336dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="304dp"
+        android:text="@string/tvHora"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,11 +9,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.proyectofinalambienteweb.data.AdminDB;
+import com.example.proyectofinalambienteweb.gestion.CitaGestion;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import model.Cita;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,19 +32,21 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         etCorreo = findViewById(R.id.etCorreo);
         etPass = findViewById(R.id.etPass);
+
+        AdminDB data = new AdminDB(getApplicationContext(),"FilaVirtual.db",null,1);
+        CitaGestion.init(data);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }//fin del onStart
 
     private void updateUI(FirebaseUser currentUser) {
         if(currentUser != null){
-            Intent intent = new Intent(this, Principal.class);
+            Intent intent = new Intent(this, activity_menuprincipal.class);
             startActivity(intent);
         }//fin del if
     }//fin del update UI

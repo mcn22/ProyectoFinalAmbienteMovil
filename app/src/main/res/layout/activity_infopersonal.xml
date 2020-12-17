@@ -4,6 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondomovil"
     tools:context=".activity_infopersonal">
+
+    <Button
+        android:id="@+id/btCancela3"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#009688"
+        android:onClick="goToMenu"
+        android:text="@string/btVolver"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/btCancela"
+        app:layout_constraintTop_toBottomOf="@+id/btCancela" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Información personal"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/tvNombre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="365dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="168dp"
+        android:text="@string/tvApellido"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="365dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="264dp"
+        android:text="@string/tvEdad"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="363dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="280dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="356dp"
+        android:text="@string/tvTelefono"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="362dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="368dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btCreaCita"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="436dp"
+        android:background="#F24F13"
+        android:text="@string/tvGuardar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btCancela"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="436dp"
+        android:background="#0081DB"
+        android:text="@string/tvCambiarFoto"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btCerrarSesion"
+        android:layout_width="172dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/btCerrarSesion"
+        app:layout_constraintEnd_toEndOf="@+id/btCreaCita"
+        app:layout_constraintTop_toBottomOf="@+id/btCreaCita" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

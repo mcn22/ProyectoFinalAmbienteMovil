@@ -2,18 +2,13 @@ package com.example.proyectofinalambienteweb.ui.cuenta;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.proyectofinalambienteweb.MainActivity;
-import com.example.proyectofinalambienteweb.Principal;
 import com.example.proyectofinalambienteweb.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -48,9 +43,9 @@ public class EditarDatos extends AppCompatActivity {
 
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
-        etEdad = findViewById(R.id.etEdad);
-        etTelefono = findViewById(R.id.etTelefono);
-        btConfirmar = findViewById(R.id.btConfirmar);
+        etEdad = findViewById(R.id.etFecha);
+        etTelefono = findViewById(R.id.etCorreo);
+        btConfirmar = findViewById(R.id.btCreaCita);
 
         btConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override

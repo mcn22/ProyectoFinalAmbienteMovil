@@ -16,7 +16,7 @@
         android:textStyle="italic" />
 
     <TextView
-        android:id="@+id/tvNombre"
+        android:id="@+id/tvNombrePrincipal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cargando..."

@@ -4,6 +4,208 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondomovil"
     tools:context=".activity_editarcita">
+
+    <Button
+        android:id="@+id/btCancela4"
+        android:layout_width="355dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:background="#009688"
+        android:onClick="goToMenu"
+        android:text="@string/btVolver"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/btCreaCita"
+        app:layout_constraintTop_toBottomOf="@+id/btCancela" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:text="Modificar cita"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvFechaActual"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvHoraActual"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/btCreaCita"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="396dp"
+        android:background="#F24F13"
+        android:onClick="modficaCita"
+        android:text="@string/tvGuardar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btCancela"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="396dp"
+        android:background="#0081DB"
+        android:onClick="eliminarCita"
+        android:text="@string/tvEliminar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/btCancela4"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvLugar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvArea"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/tvFechaActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/tvHoraActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvFechaNueva"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:inputType="date"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <Spinner
+        android:id="@+id/spinnerHora"
+        android:layout_width="164dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tvHoraNueva"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

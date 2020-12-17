@@ -3,28 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/bckglogin"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvCorreo" />
+        android:text="@string/tvCorreo"
+        android:textColor="#203E5B"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="#203E5B"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tvPass" />
+        android:text="@string/tvPass"
+        android:textColor="#203E5B"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etPass"
@@ -32,19 +45,32 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <Button
         android:id="@+id/btIngreso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#F24F13"
         android:onClick="login"
-        android:text="@string/btIngresar" />
+        android:text="@string/btIngresar"
+        android:textColor="#FFFFFF" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <Button
         android:id="@+id/btRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#0460D9"
+        android:lineSpacingExtra="10sp"
         android:onClick="sinCuenta"
-        android:text="@string/btNoCuenta" />
+        android:text="@string/btNoCuenta"
+        android:textColor="#FFFFFF" />
+
 
 </LinearLayout>

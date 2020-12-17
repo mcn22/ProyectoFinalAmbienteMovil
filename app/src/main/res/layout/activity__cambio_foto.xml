@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomovil"
+    tools:context=".activity_CambioFoto">
+
+    <Button
+        android:id="@+id/btCancela2"
+        android:layout_width="355dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:background="#009688"
+        android:onClick="goToMenu"
+        android:text="@string/btVolver"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/btCreaCita"
+        app:layout_constraintTop_toBottomOf="@+id/btCancela" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/tvCambioFotoPerfil"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btCreaCita"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="32dp"
+        android:background="#F24F13"
+        android:text="@string/tvActualizarFoto"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCambio" />
+
+    <Button
+        android:id="@+id/btCancela"
+        android:layout_width="169dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="#0081DB"
+        android:text="@string/btBuscar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCambio" />
+
+    <ImageView
+        android:id="@+id/imageViewCambio"
+        android:layout_width="327dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.proyectofinalambienteweb.MainActivity;
 import com.example.proyectofinalambienteweb.R;
-import com.example.proyectofinalambienteweb.Registro;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +22,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import gestion.UsuarioGestion;
 import model.Usuario;
 
 public class Cuenta extends Fragment {
@@ -47,7 +44,7 @@ public class Cuenta extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_cuenta, container, false);
         //mapeado
-        tvNombre = root.findViewById(R.id.tvNombre);
+        tvNombre = root.findViewById(R.id.tvNombrePrincipal);
         tvApellido = root.findViewById(R.id.tvApellido);
         tvEdad = root.findViewById(R.id.tvEdad);
         tvTelefono = root.findViewById(R.id.tvTelefono);
