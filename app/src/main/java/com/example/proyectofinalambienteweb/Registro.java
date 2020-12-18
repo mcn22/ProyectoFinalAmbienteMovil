@@ -45,7 +45,7 @@ public class Registro extends AppCompatActivity {
         etNombre = findViewById(R.id.etNombre);
         etApellido = findViewById(R.id.etApellido);
         etEdad = findViewById(R.id.etFecha);
-        etTelefono = findViewById(R.id.etCorreo);
+        etTelefono = findViewById(R.id.etTelefono);
         etCorreo = findViewById(R.id.etCorreo);
         etPass = findViewById(R.id.etPass);
     }
